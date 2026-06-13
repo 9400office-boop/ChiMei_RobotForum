@@ -37,8 +37,9 @@
   header.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:.3s}
   header.nav.scrolled{border-bottom-color:var(--line);box-shadow:0 4px 22px rgba(12,42,94,.06)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
-  .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:15px;color:var(--navy)}
-  .brand .logo{width:36px;height:36px;flex:none}
+  .brand{display:flex;align-items:center}
+  .brand-logo{height:42px;width:auto;display:block}
+  @media(max-width:520px){.brand-logo{height:34px}}
   .nav-right{display:flex;align-items:center;gap:6px}
   .nav-links{display:flex;gap:2px;align-items:center}
   .nav-links a{font-size:14.5px;color:var(--ink-2);padding:8px 12px;border-radius:8px;transition:.2s;position:relative;font-weight:500}
@@ -293,10 +294,7 @@
 
 <header class="nav" id="nav">
   <div class="wrap nav-in">
-    <div class="brand">
-      <svg class="logo" viewBox="0 0 40 40" fill="none"><rect x="2" y="2" width="36" height="36" rx="10" fill="url(#lg)"/><path d="M13 27V14a3 3 0 013-3h2v8h4v-8h2a3 3 0 013 3v13" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg" x1="2" y1="2" x2="38" y2="38"><stop stop-color="#1763d6"/><stop offset="1" stop-color="#0fb6ac"/></linearGradient></defs></svg>
-      <span>智慧醫療機器人前瞻論壇</span>
-    </div>
+    <a class="brand" href="#top"><img class="brand-logo" src="chimei-logo.png" alt="奇美醫療財團法人 奇美醫院 Chi Mei Medical Center"></a>
     <button class="burger" id="burger" aria-label="選單">☰</button>
     <div class="nav-right">
       <nav class="nav-links" id="navlinks">

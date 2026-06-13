@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大南方智慧醫療機器人前瞻論壇 | 115.08.17</title>
+<meta name="description" content="健康台灣 深耕計畫｜大南方智慧醫療機器人前瞻論壇，115年8月17日於奇美醫院第五醫療大樓5樓國際會議廳。探索智慧科技、驅動醫療創新、共創健康未來。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0c2a5e;
+    --navy-d:#081d44;
+    --blue:#1763d6;
+    --blue-l:#3b86f0;
+    --teal:#0fb6ac;
+    --ink:#16263f;
+    --ink-2:#4a5d78;
+    --ink-3:#7f8da6;
+    --line:#e4e9f2;
+    --bg:#ffffff;
+    --bg-soft:#f5f8fd;
+    --bg-soft2:#eef4fc;
+    --gold:#e8973a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Noto Sans TC",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  .accent{color:var(--blue)}
+
+  #prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;background:linear-gradient(90deg,var(--teal),var(--blue))}
+
+  /* nav */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:.3s}
+  header.nav.scrolled{border-bottom-color:var(--line);box-shadow:0 4px 22px rgba(12,42,94,.06)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:15px;color:var(--navy)}
+  .brand .logo{width:36px;height:36px;flex:none}
+  .nav-right{display:flex;align-items:center;gap:6px}
+  .nav-links{display:flex;gap:2px;align-items:center}
+  .nav-links a{font-size:14.5px;color:var(--ink-2);padding:8px 12px;border-radius:8px;transition:.2s;position:relative;font-weight:500}
+  .nav-links a:hover{color:var(--blue);background:var(--bg-soft)}
+  .nav-links a.active{color:var(--blue)}
+  .nav-links a.active::after{content:"";position:absolute;left:12px;right:12px;bottom:3px;height:2px;border-radius:2px;background:var(--blue)}
+  .nav-poster{font-size:13.5px;color:var(--ink-2);border:1px solid var(--line);padding:8px 14px;border-radius:8px;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+  .nav-poster:hover{border-color:var(--blue);color:var(--blue)}
+  .nav-cta{padding:9px 20px;border-radius:30px;font-weight:700;color:#fff;font-size:14px;background:linear-gradient(100deg,var(--blue),var(--teal));box-shadow:0 6px 18px rgba(23,99,214,.3)}
+  .burger{display:none;font-size:26px;color:var(--navy);background:none;border:none;cursor:pointer}
+  @media(max-width:980px){
+    .nav-links{position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .35s;box-shadow:0 12px 24px rgba(12,42,94,.08)}
+    .nav-links.open{max-height:460px}
+    .nav-links a{padding:15px 22px;width:100%;border-radius:0;border-bottom:1px solid var(--line)}
+    .nav-links a.active::after{display:none}
+    .nav-poster{display:none}
+    .burger{display:block}
+  }
+
+  /* hero */
+  .hero{position:relative;color:#fff;padding:140px 0 86px;overflow:hidden;
+    background:radial-gradient(900px 540px at 84% 12%,rgba(15,182,172,.32),transparent 60%),
+      radial-gradient(820px 540px at 8% 96%,rgba(59,134,240,.30),transparent 60%),
+      linear-gradient(160deg,#0c2a5e,#0a224e 55%,#081d44)}
+  .hero .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(circle at 60% 40%,#000,transparent 80%);-webkit-mask-image:radial-gradient(circle at 60% 40%,#000,transparent 80%)}
+  .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.04fr;gap:38px;align-items:center}
+  .deepen{display:inline-flex;align-items:center;gap:8px;color:#7fe9df;font-weight:700;font-size:13.5px;letter-spacing:1.5px;margin-bottom:20px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:22px}
+  .chip{font-size:12.5px;font-weight:500;padding:6px 14px;border-radius:30px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#dbe7ff}
+  .chip.free{background:rgba(232,151,58,.18);border-color:rgba(232,151,58,.5);color:#ffd09a;font-weight:700}
+  .hero h1{font-size:clamp(34px,5.2vw,60px);line-height:1.12;font-weight:900;letter-spacing:1px}
+  .hero h1 .g{background:linear-gradient(100deg,#7fe9df,#7fb6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .subt{font-size:clamp(15px,1.7vw,18px);color:#c4d4f2;letter-spacing:2px;margin:18px 0 28px;font-weight:500}
+  .hero-meta{display:flex;flex-direction:column;gap:12px;margin-bottom:30px}
+  .hero-meta .row{display:flex;align-items:center;gap:13px;font-size:15.5px}
+  .hero-meta .ic{width:40px;height:40px;flex:none;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);color:#7fe9df}
+  .hero-meta .ic svg{width:20px;height:20px}
+  .hero-meta b{font-weight:700}
+  .hero-meta small{display:block;color:#9fb4dc;font-size:12.5px}
+  .hero-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin:0 0 28px}
+  .hf{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:13px;padding:13px 12px;text-align:center}
+  .hf .k{display:block;font-size:12px;color:#9fb4dc;margin-bottom:5px;letter-spacing:.5px}
+  .hf .v{display:block;font-size:15.5px;font-weight:700;color:#fff;line-height:1.3}
+  .hf .v.free{color:#7fe9df;font-size:17px}
+  @media(max-width:420px){.hero-facts{gap:8px}.hf{padding:11px 7px}.hf .v{font-size:13.5px}.hf .v.free{font-size:15px}}
+  .btn-row{display:flex;gap:13px;flex-wrap:wrap}
+  .btn{padding:14px 28px;border-radius:30px;font-weight:700;font-size:15px;cursor:pointer;border:none;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+  .btn-primary{color:#fff;background:linear-gradient(100deg,var(--blue),var(--teal));box-shadow:0 8px 24px rgba(15,182,172,.36)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(15,182,172,.5)}
+  .btn-ghost{color:#fff;background:transparent;border:1px solid rgba(255,255,255,.32)}
+  .btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+  /* hero side card: robot + countdown */
+  .side{display:flex;flex-direction:column;align-items:center;gap:18px}
+  .poster-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%}
+  .pp{display:block;transition:transform .3s}
+  .pp:hover{transform:translateY(-5px)}
+  .pp img{width:100%;border-radius:11px;border:1px solid rgba(255,255,255,.18);box-shadow:0 18px 46px rgba(0,0,0,.45);display:block}
+  .pp span{display:block;text-align:center;font-size:12.5px;color:#bcd0f2;margin-top:9px;font-weight:500}
+  .poster-tip{text-align:center;font-size:12px;color:#9fb4dc;margin-top:4px;letter-spacing:.5px}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .cd-card{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:18px 18px 16px;backdrop-filter:blur(6px)}
+  .cd-card .lbl{text-align:center;font-size:12.5px;color:#bcd0f2;letter-spacing:1.5px;margin-bottom:12px}
+  .countdown{display:flex;gap:9px}
+  .cd-box{flex:1;background:rgba(8,29,68,.55);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:11px 4px;text-align:center}
+  .cd-box .n{font-size:25px;font-weight:900;color:#7fe9df;font-variant-numeric:tabular-nums}
+  .cd-box .l{font-size:11px;color:#9fb4dc;margin-top:2px}
+
+  /* sections */
+  section{padding:84px 0;position:relative}
+  .bg-soft{background:var(--bg-soft)}
+  .sec-head{text-align:center;margin-bottom:50px}
+  .eyebrow{font-size:12.5px;letter-spacing:4px;color:var(--teal);font-weight:700;margin-bottom:10px}
+  .sec-title{font-size:clamp(25px,3.4vw,38px);font-weight:900;letter-spacing:1px;color:var(--navy)}
+  .sec-title .bar{display:block;width:54px;height:4px;border-radius:3px;background:linear-gradient(90deg,var(--blue),var(--teal));margin:16px auto 0}
+  .sec-desc{max-width:700px;margin:18px auto 0;color:var(--ink-2);font-size:15.5px}
+
+  /* info cards */
+  .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .icard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 26px;transition:.3s;text-align:center}
+  .icard:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(12,42,94,.1);border-color:#cfe0f7}
+  .icard .ic{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;margin:0 auto 16px;background:linear-gradient(150deg,var(--blue),var(--teal))}
+  .icard .ic svg{width:28px;height:28px;color:#fff}
+  .icard h3{font-size:14px;color:var(--teal);letter-spacing:1px;margin-bottom:8px;font-weight:700}
+  .icard p{font-size:16px;font-weight:700;color:var(--navy)}
+  .icard small{display:block;color:var(--ink-2);font-size:13.5px;font-weight:400;margin-top:4px}
+  .about-actions{display:flex;gap:13px;justify-content:center;margin-top:38px;flex-wrap:wrap}
+  .btn-blue{padding:13px 26px;border-radius:30px;font-weight:700;font-size:15px;color:#fff;background:linear-gradient(100deg,var(--blue),var(--teal));box-shadow:0 8px 22px rgba(23,99,214,.28);display:inline-flex;align-items:center;gap:8px;transition:.25s;cursor:pointer;border:none}
+  .btn-blue:hover{transform:translateY(-2px)}
+  .btn-line{padding:13px 26px;border-radius:30px;font-weight:700;font-size:15px;color:var(--blue);background:#fff;border:1px solid #cfe0f7;display:inline-flex;align-items:center;gap:8px;transition:.25s}
+  .btn-line:hover{border-color:var(--blue);background:var(--bg-soft)}
+  .lead-box{max-width:780px;margin:42px auto 0;background:var(--bg-soft);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:0 14px 14px 0;padding:24px 28px;color:var(--ink-2);font-size:15.5px}
+
+  /* topics — dark tech band */
+  #topics{background:radial-gradient(820px 500px at 84% 6%,rgba(15,182,172,.18),transparent 60%),radial-gradient(760px 520px at 6% 96%,rgba(120,90,255,.18),transparent 62%),linear-gradient(160deg,#0c2a5e,#0a224e 55%,#081d44);color:#fff;position:relative;overflow:hidden}
+  #topics .gridfx{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(circle at 50% 28%,#000,transparent 78%);-webkit-mask-image:radial-gradient(circle at 50% 28%,#000,transparent 78%)}
+  #topics .wrap{position:relative;z-index:2}
+  #topics .sec-title{color:#fff}
+  #topics .sec-desc{color:#bcd0f2}
+  .topics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tcol{position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:28px 26px;backdrop-filter:blur(8px);overflow:hidden;transition:.35s}
+  .tcol::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--cg)}
+  .tcol:hover{transform:translateY(-8px);border-color:rgba(255,255,255,.28);box-shadow:0 26px 64px rgba(0,0,0,.42)}
+  .tghost{position:absolute;top:2px;right:18px;font-size:104px;font-weight:900;font-style:italic;line-height:1;color:rgba(255,255,255,.055);pointer-events:none}
+  .thead{display:flex;align-items:center;gap:14px;position:relative;z-index:2}
+  .ticon{width:58px;height:58px;flex:none;border-radius:16px;display:grid;place-items:center;background:var(--cg);box-shadow:0 0 30px var(--cglow)}
+  .ticon svg{width:29px;height:29px;color:#fff}
+  .tmeta .tlabel{font-size:11px;letter-spacing:2.5px;font-weight:700;color:var(--cac)}
+  .tmeta .tname{font-size:19.5px;font-weight:800;color:#fff;margin-top:3px}
+  .tdiv{height:1px;background:rgba(255,255,255,.13);margin:20px 0 16px}
+  .tlist{display:flex;flex-direction:column;gap:11px}
+  .titem{display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);transition:.25s}
+  .titem:hover{background:rgba(255,255,255,.1);transform:translateX(5px)}
+  .titem .no{flex:none;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-weight:900;font-size:14px;color:#fff;background:var(--cg);box-shadow:0 0 16px var(--cglow)}
+  .titem .tx{font-size:15px;font-weight:600;color:#eaf1ff}
+  .titem .ar{margin-left:auto;color:rgba(255,255,255,.32);display:flex;transition:.25s}
+  .titem .ar svg{width:18px;height:18px}
+  .titem:hover .ar{color:var(--cac);transform:translateX(3px)}
+  .c1{--cg:linear-gradient(135deg,#2fe2e6,#0a7d8a);--cac:#5ff0ef;--cglow:rgba(47,226,230,.32)}
+  .c2{--cg:linear-gradient(135deg,#b07bff,#6d3bd4);--cac:#cbacff;--cglow:rgba(176,123,255,.32)}
+  .c3{--cg:linear-gradient(135deg,#4f9bff,#1450b0);--cac:#93bcff;--cglow:rgba(79,155,255,.32)}
+
+  /* agenda */
+  .agenda{max-width:920px;margin:0 auto;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 34px rgba(12,42,94,.06)}
+  .ag-head{display:grid;grid-template-columns:140px 1fr 220px;background:linear-gradient(100deg,var(--navy),var(--blue));color:#fff;font-weight:700;font-size:14.5px;letter-spacing:2px}
+  .ag-head div{padding:16px 20px}
+  .ag-head .c2,.ag-head .c3{border-left:1px solid rgba(255,255,255,.16)}
+  .ag-row{display:grid;grid-template-columns:140px 1fr 220px;border-top:1px solid var(--line);background:#fff;transition:.2s}
+  .ag-row:nth-child(even){background:var(--bg-soft)}
+  .ag-row:hover{background:var(--bg-soft2)}
+  .ag-row>div{padding:16px 20px}
+  .ag-row .c2,.ag-row .c3{border-left:1px solid var(--line)}
+  .ag-time{font-weight:800;color:var(--blue);font-size:14px;font-variant-numeric:tabular-nums}
+  .ag-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:3px}
+  .ag-badge{display:inline-block;font-size:11.5px;font-weight:700;color:var(--teal);background:rgba(15,182,172,.1);padding:2px 10px;border-radius:20px;margin-bottom:7px}
+  .ag-sp{font-size:13px;color:var(--ink-2)}
+  .ag-row.brk{background:#fff7ed}
+  .ag-row.brk .ag-time{color:var(--gold)}
+  .ag-row.brk .ag-title{color:var(--ink-2);font-weight:500}
+  @media(max-width:820px){
+    .ag-head{display:none}.ag-row{grid-template-columns:1fr}.ag-row>div{padding:7px 18px}
+    .ag-row .c1{padding-top:15px}.ag-row .c3{padding-bottom:15px}.ag-row .c2,.ag-row .c3{border-left:none}
+  }
+
+  /* registration notes + form */
+  .reg-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:start}
+  .notes{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 28px}
+  .notes h4{font-size:15px;color:var(--navy);font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .notes ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+  .notes li{display:flex;gap:11px;font-size:14px;color:var(--ink-2)}
+  .notes li svg{width:18px;height:18px;flex:none;color:var(--teal);margin-top:3px}
+  .fee{margin-top:22px;padding-top:20px;border-top:1px dashed var(--line)}
+  .fee .frow{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:14.5px}
+  .fee .frow b{color:var(--teal);font-weight:800}
+  .reg-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px 30px;box-shadow:0 12px 40px rgba(12,42,94,.07)}
+  .deadline{text-align:center;font-size:14px;color:var(--ink-2);margin-bottom:22px}
+  .deadline b{color:var(--gold)}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .fld{display:flex;flex-direction:column;gap:6px}
+  .fld.full{grid-column:1/-1}
+  .fld label{font-size:13px;color:var(--ink-2);font-weight:600}
+  .fld label .req{color:#e0556b;margin-left:3px}
+  .fld input,.fld select,.fld textarea{background:#fbfcfe;border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--ink);font-size:15px;font-family:inherit;transition:.2s;width:100%}
+  .fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(23,99,214,.13)}
+  .fld textarea{resize:vertical;min-height:74px}
+  .fld .err{font-size:12px;color:#e0556b;display:none}
+  .fld .hint{font-size:12px;color:var(--ink-3);line-height:1.5}
+  .fld input::placeholder,.fld textarea::placeholder{color:#aeb9cc}
+  .fld.invalid input,.fld.invalid select{border-color:#e0556b;box-shadow:0 0 0 3px rgba(224,85,107,.12)}
+  .fld.invalid .err{display:block}
+  .radio-row{display:flex;gap:9px;flex-wrap:wrap}
+  .radio-row label{flex:1;min-width:108px;display:flex;align-items:center;gap:8px;cursor:pointer;padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe;font-size:14px;transition:.2s}
+  .radio-row label:hover{border-color:var(--blue)}
+  .radio-row input{accent-color:var(--blue);width:16px;height:16px}
+  .consent{background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin-top:4px}
+  .consent.invalid{border-color:#e0556b;box-shadow:0 0 0 3px rgba(224,85,107,.1)}
+  .consent .privacy{font-size:12.5px;color:var(--ink-2);line-height:1.75;margin:0}
+  .consent .agree{display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:14px;color:var(--ink)}
+  .consent .agree input{accent-color:var(--blue);width:17px;height:17px;margin-top:3px;flex:none}
+  .consent .err{font-size:12px;color:#e0556b;display:none;margin-top:9px}
+  .consent.invalid .err{display:block}
+  .submit-btn{width:100%;margin-top:22px;padding:15px;border-radius:12px;border:none;cursor:pointer;font-size:16px;font-weight:800;letter-spacing:1px;color:#fff;background:linear-gradient(100deg,var(--blue),var(--teal));box-shadow:0 8px 24px rgba(23,99,214,.3);transition:.25s}
+  .submit-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(23,99,214,.42)}
+  .submit-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+  .form-note{font-size:12px;color:var(--ink-3);margin-top:14px;line-height:1.7}
+  .form-msg{display:none;text-align:center;padding:40px 16px}
+  .form-msg .big{width:78px;height:78px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;background:rgba(15,182,172,.12)}
+  .form-msg .big svg{width:38px;height:38px;color:var(--teal)}
+  .form-msg h3{font-size:21px;color:var(--navy);margin-bottom:10px}
+  .form-msg p{color:var(--ink-2);font-size:14px;max-width:420px;margin:0 auto}
+
+  /* transport */
+  .trans-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+  .trans-list{display:flex;flex-direction:column;gap:14px}
+  .tline{display:flex;gap:15px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .tline .tag{flex:none;width:54px;height:54px;border-radius:13px;display:grid;place-items:center;background:var(--bg-soft);color:var(--blue);font-weight:800;font-size:14px;text-align:center;line-height:1.2}
+  .tline .tag svg{width:24px;height:24px}
+  .tline h4{font-size:15.5px;color:var(--navy);font-weight:700;margin-bottom:3px}
+  .tline p{font-size:13.5px;color:var(--ink-2)}
+  .map-box{border:1px solid var(--line);border-radius:16px;overflow:hidden;min-height:340px;box-shadow:0 10px 30px rgba(12,42,94,.07)}
+  .map-box iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+  .trans-note{max-width:920px;margin:24px auto 0;text-align:center;font-size:13.5px;color:var(--ink-2);background:#fff7ed;border:1px solid #f6e2c4;border-radius:12px;padding:12px 18px}
+  .poster-figure{max-width:560px;margin:38px auto 0;text-align:center}
+  .poster-figure a{display:block;line-height:0;transition:transform .3s}
+  .poster-figure a:hover{transform:translateY(-5px)}
+  .poster-figure img{width:100%;border-radius:14px;border:1px solid var(--line);box-shadow:0 18px 48px rgba(12,42,94,.14);display:block}
+  .poster-figure .cap{font-size:12.5px;color:var(--ink-3);margin-top:12px;letter-spacing:.5px}
+
+  /* contact / org */
+  .org-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;margin-bottom:24px}
+  .org{padding:26px 24px;text-align:center;border-left:1px solid var(--line)}
+  .org:first-child{border-left:none}
+  .org h4{font-size:13.5px;color:var(--teal);letter-spacing:1.5px;margin-bottom:12px;font-weight:800}
+  .org p{font-size:14.5px;color:var(--ink);line-height:2}
+  .contact{max-width:520px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 28px;text-align:center}
+  .contact h4{font-size:14px;color:var(--navy);font-weight:800;margin-bottom:10px}
+  .contact p{font-size:14.5px;color:var(--ink-2);line-height:1.9}
+  @media(max-width:820px){.org-grid{grid-template-columns:1fr}.org{border-left:none;border-top:1px solid var(--line)}.org:first-child{border-top:none}}
+
+  /* footer */
+  footer{background:var(--navy-d);color:#c4d4f2;padding:50px 0 36px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:28px;margin-bottom:28px}
+  .foot-grid h5{font-size:14px;color:#fff;margin-bottom:12px}
+  .foot-grid p,.foot-grid a{font-size:13.5px;color:#9fb4dc;line-height:2;display:block}
+  .foot-grid a:hover{color:#7fe9df}
+  .foot-bottom{text-align:center;color:#6d82ad;font-size:12.5px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1)}
+
+  .modal-ov{position:fixed;inset:0;z-index:100;background:rgba(8,20,44,.6);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:.25s}
+  .modal-ov.show{opacity:1;pointer-events:auto}
+  .modal{background:#fff;border-radius:20px;padding:38px 34px;max-width:420px;width:100%;text-align:center;box-shadow:0 30px 80px rgba(8,20,44,.4);transform:translateY(16px) scale(.96);transition:.3s}
+  .modal-ov.show .modal{transform:none}
+  .modal .mok{width:80px;height:80px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:rgba(15,182,172,.12);animation:pop .45s ease}
+  @keyframes pop{0%{transform:scale(.4);opacity:0}60%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+  .modal .mok svg{width:40px;height:40px;color:var(--teal)}
+  .modal h3{font-size:22px;color:var(--navy);margin-bottom:10px;font-weight:800}
+  .modal p{color:var(--ink-2);font-size:14.5px;line-height:1.8;margin-bottom:24px}
+  .modal .mbtn{padding:13px 40px;border-radius:30px;border:none;cursor:pointer;font-size:15.5px;font-weight:700;color:#fff;background:linear-gradient(100deg,var(--blue),var(--teal));box-shadow:0 8px 22px rgba(23,99,214,.3);transition:.2s}
+  .modal .mbtn:hover{transform:translateY(-2px)}
+  #toTop{position:fixed;right:22px;bottom:22px;z-index:40;width:48px;height:48px;border-radius:50%;border:none;background:linear-gradient(100deg,var(--blue),var(--teal));color:#fff;display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;box-shadow:0 8px 22px rgba(23,99,214,.4)}
+  #toTop.show{opacity:1;pointer-events:auto}
+  #toTop svg{width:22px;height:22px}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.robot-img{animation:none}}
+
+  @media(max-width:980px){.hero-in,.info-grid,.topics,.reg-grid,.trans-grid,.foot-grid,.form-grid{grid-template-columns:1fr}.hero{padding:120px 0 64px}section{padding:62px 0}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 40 40" fill="none"><rect x="2" y="2" width="36" height="36" rx="10" fill="url(#lg)"/><path d="M13 27V14a3 3 0 013-3h2v8h4v-8h2a3 3 0 013 3v13" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg" x1="2" y1="2" x2="38" y2="38"><stop stop-color="#1763d6"/><stop offset="1" stop-color="#0fb6ac"/></linearGradient></defs></svg>
+      <span>智慧醫療機器人前瞻論壇</span>
+    </div>
+    <button class="burger" id="burger" aria-label="選單">☰</button>
+    <div class="nav-right">
+      <nav class="nav-links" id="navlinks">
+        <a href="#about">活動資訊</a>
+        <a href="#agenda">活動議程</a>
+        <a href="#topics">六大議題</a>
+        <a href="#register">報名資訊</a>
+        <a href="#transport">交通資訊</a>
+        <a href="#contact">聯絡資訊</a>
+        <a href="海報.pdf" target="_blank" class="nav-poster"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>海報下載</a>
+        <a href="#register" class="nav-cta">立即報名</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="grid-bg"></div>
+  <div class="wrap hero-in">
+    <div>
+      <div class="deepen">✦ 健康台灣 · 深耕計畫</div>
+      <div class="chips">
+        <span class="chip">醫療現場挑戰</span>
+        <span class="chip">智慧病房應用</span>
+        <span class="chip">未來發展藍圖</span>
+        <span class="chip free">免費參加 · 席次有限</span>
+      </div>
+      <h1>大南方<br><span class="g">智慧醫療機器人</span><br>前瞻論壇</h1>
+      <p class="subt">探索智慧科技 · 驅動醫療創新 · 共創健康未來</p>
+      <div class="hero-meta">
+        <div class="row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+          <div><b>115年8月17日（星期一）13:00 – 17:15</b><small>13:00 開始報到 · 現場智慧機器人實機體驗</small></div>
+        </div>
+        <div class="row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.6-7-11a7 7 0 0114 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><b>奇美醫院 第五醫療大樓 5樓 國際會議廳</b><small>台南市永康區中華路901號</small></div>
+        </div>
+      </div>
+      <div class="hero-facts">
+        <div class="hf"><span class="k">報名費用</span><span class="v free">免費</span></div>
+        <div class="hf"><span class="k">報名截止</span><span class="v">115/08/10（一）</span></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="go('#register')">立即報名
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <a class="btn btn-ghost" href="#agenda">查看議程</a>
+      </div>
+    </div>
+    <div class="side">
+      <div class="poster-pair">
+        <a class="pp" href="海報.pdf" target="_blank" title="點擊開啟完整海報 PDF">
+          <img src="poster-final.png" alt="大南方智慧醫療機器人前瞻論壇 活動海報"><span>活動海報</span>
+        </a>
+        <a class="pp" href="海報.pdf" target="_blank" title="點擊開啟完整海報 PDF">
+          <img src="agenda-final.png" alt="智慧醫療機器人前瞻論壇 議程海報"><span>議程海報</span>
+        </a>
+      </div>
+      <div class="poster-tip">點擊海報開啟 PDF 完整版</div>
+      <div class="cd-card">
+        <div class="lbl">距離論壇開始</div>
+        <div class="countdown" id="cd">
+          <div class="cd-box"><div class="n" id="cd-d">--</div><div class="l">天</div></div>
+          <div class="cd-box"><div class="n" id="cd-h">--</div><div class="l">時</div></div>
+          <div class="cd-box"><div class="n" id="cd-m">--</div><div class="l">分</div></div>
+          <div class="cd-box"><div class="n" id="cd-s">--</div><div class="l">秒</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">ABOUT THE FORUM</div>
+      <h2 class="sec-title">活動資訊<span class="bar"></span></h2>
+    </div>
+    <div class="info-grid">
+      <div class="icard reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <h3>活動時間</h3><p>115年8月17日（星期一）<small>13:00 – 17:15（13:00 開始報到）</small></p>
+      </div>
+      <div class="icard reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.6-7-11a7 7 0 0114 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3>活動地點</h3><p>奇美醫院 第五醫療大樓 5樓 國際會議廳<small>台南市永康區中華路901號</small></p>
+      </div>
+      <div class="icard reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3.5 19a5.5 5.5 0 0111 0M15 19a5 5 0 015-3"/></svg></div>
+        <h3>參加對象</h3><p>醫療、研究與產業夥伴<small>免費參加 · 名額有限，額滿為止</small></p>
+      </div>
+    </div>
+    <div class="about-actions reveal">
+      <button class="btn-blue" onclick="go('#register')">立即報名
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <a class="btn-line" id="calLink" target="_blank">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>加入行事曆
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section id="agenda" class="bg-soft">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">SCHEDULE</div>
+      <h2 class="sec-title">活動議程<span class="bar"></span></h2>
+      <p class="sec-desc">115.08.17（一）13:00 – 17:15 ｜ 奇美醫院第五醫療大樓5樓 國際會議廳</p>
+    </div>
+    <div class="agenda reveal">
+      <div class="ag-head"><div class="c1">時間</div><div class="c2">議程</div><div class="c3">主講人</div></div>
+      <div id="agenda-list"></div>
+    </div>
+    <p style="text-align:center;color:var(--ink-3);font-size:13px;margin-top:20px">＊主辦單位保有議程調整之權利，最新資訊請關注官方公告。</p>
+  </div>
+</section>
+
+<!-- TOPICS -->
+<section id="topics">
+  <div class="gridfx"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">SIX KEY TOPICS</div>
+      <h2 class="sec-title">論壇主軸 · 六大議題<span class="bar"></span></h2>
+      <p class="sec-desc">三大面向、六大議題，完整貫穿從挑戰、應用到未來的智慧醫療路徑。</p>
+    </div>
+    <div class="topics">
+      <div class="tcol c1 reveal">
+        <div class="tghost">01</div>
+        <div class="thead">
+          <div class="ticon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3.5 19a5.5 5.5 0 0111 0M15 19a5 5 0 015-3"/></svg></div>
+          <div class="tmeta"><div class="tlabel">CHALLENGE</div><div class="tname">醫療現場挑戰</div></div>
+        </div>
+        <div class="tdiv"></div>
+        <div class="tlist">
+          <div class="titem"><span class="no">01</span><span class="tx">醫療人力與照護挑戰</span></div>
+          <div class="titem"><span class="no">02</span><span class="tx">臨床需求直擊</span></div>
+        </div>
+      </div>
+      <div class="tcol c2 reveal">
+        <div class="tghost">02</div>
+        <div class="thead">
+          <div class="ticon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a2 2 0 012-2h10a4 4 0 014 4v4M3 14h18M3 18v2M21 18v2"/><path d="M12 6h3M13.5 4.5v3"/></svg></div>
+          <div class="tmeta"><div class="tlabel">APPLICATION</div><div class="tname">智慧病房應用</div></div>
+        </div>
+        <div class="tdiv"></div>
+        <div class="tlist">
+          <div class="titem"><span class="no">03</span><span class="tx">智慧病房新場景</span></div>
+          <div class="titem"><span class="no">04</span><span class="tx">AI 數位勞動力</span></div>
+        </div>
+      </div>
+      <div class="tcol c3 reveal">
+        <div class="tghost">03</div>
+        <div class="thead">
+          <div class="ticon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l4-4 4 3 3-3 4 4M8 13l3 3 2-2 3 3"/><path d="M3 12v5h18v-5"/></svg></div>
+          <div class="tmeta"><div class="tlabel">BLUEPRINT</div><div class="tname">未來發展藍圖</div></div>
+        </div>
+        <div class="tdiv"></div>
+        <div class="tlist">
+          <div class="titem"><span class="no">05</span><span class="tx">前瞻醫療機器人</span></div>
+          <div class="titem"><span class="no">06</span><span class="tx">智慧醫療生態系</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section id="register" class="bg-soft">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">REGISTRATION</div>
+      <h2 class="sec-title">報名資訊<span class="bar"></span></h2>
+    </div>
+    <div class="reg-grid">
+      <div class="notes reveal">
+        <h4><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>注意事項</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>本論壇免費參加，名額有限，依報名順序與資格審核錄取，額滿為止。</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>現場設有智慧機器人實機展示交流區，歡迎提早入場體驗。</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>本活動若因不可抗力因素，保有修改、取消及延期之權利，並以 Email 通知。</li>
+        </ul>
+        <div class="fee">
+          <div class="frow"><span>報名費用</span><b>免費</b></div>
+          <div class="frow"><span>報名截止</span><span>115年8月10日（一）</span></div>
+        </div>
+      </div>
+      <div class="reg-card reveal">
+        <p class="deadline">報名截止：<b>115年8月10日（一）</b>　額滿為止</p>
+        <form id="regform" novalidate>
+          <div class="form-grid">
+            <div class="fld"><label>姓名<span class="req">*</span></label><input name="姓名" required placeholder="請輸入您的姓名"><span class="err">請填寫姓名</span></div>
+            <div class="fld"><label>身分證字號<span class="req">*</span></label><input name="身分證字號" required placeholder=""><span class="hint"></span><span class="err">請填寫身分證字號</span></div>
+            <div class="fld"><label>服務單位<span class="req">*</span></label><input name="服務單位" required placeholder="如：奇美醫院"><span class="err">請填寫服務單位</span></div>
+            <div class="fld"><label>部門<span class="req">*</span></label><input name="部門" required placeholder="如：藥劑部"><span class="err">請填寫部門</span></div>
+            <div class="fld"><label>職稱<span class="req">*</span></label><input name="職稱" required placeholder="如：藥師"><span class="err">請填寫職稱</span></div>
+            <div class="fld"><label>聯絡電話／手機<span class="req">*</span></label><input name="電話" required placeholder="如：0912-345-678"><span class="err">請填寫聯絡電話</span></div>
+            <div class="fld full"><label>Email<span class="req">*</span></label><input type="email" name="Email" required placeholder="請輸入聯絡信箱，如：example@mail.com"><span class="err">請填寫正確的 Email</span></div>
+            <div class="fld full"><label>職類<span class="req">*</span></label>
+              <select name="職類" required>
+                <option value="">── 請選擇職類 ──</option>
+                <option>西醫</option><option>牙醫</option><option>中醫</option><option>藥事</option>
+                <option>醫事放射</option><option>醫事檢驗</option><option>護理</option><option>專科護理師</option>
+                <option>營養</option><option>呼吸治療</option><option>物理治療</option><option>職能治療</option>
+                <option>資訊／工程</option><option>行政管理</option><option>產業／廠商</option><option>其他</option>
+              </select><span class="err">請選擇職類</span>
+            </div>
+            <div class="fld full"><label>備註</label><textarea name="備註" placeholder="如有特殊需求或問題，可於此說明"></textarea></div>
+            <div class="fld full consent">
+              <p class="privacy">本表單蒐集之個人資料僅供本論壇報名作業、學分登錄及報名結果通知使用，主辦單位將依《個人資料保護法》妥善保管。</p>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn" id="submitBtn">提交報名</button>
+          <p class="form-note">送出後，主辦單位將以 Email 通知報名結果與相關資訊，請留意信件通知。本表單僅供本活動報名使用。</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSPORT -->
+<section id="transport">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">TRANSPORTATION</div>
+      <h2 class="sec-title">交通資訊<span class="bar"></span></h2>
+      <p class="sec-desc">會場停車空間有限，建議多加搭乘大眾運輸工具。</p>
+    </div>
+    <div class="trans-grid reveal">
+      <div class="trans-list">
+        <div class="tline"><div class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="13" rx="3"/><path d="M5 11h14M8 20l-2 2M16 20l2 2M9 16v2M15 16v2"/></svg></div><div><h4>臺鐵</h4><p>搭乘火車至「大橋火車站」，再步行至奇美醫院。</p></div></div>
+        <div class="tline"><div class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15l2-9h12l2 9M4 15h16M4 15v3M20 15v3M7 9h10"/></svg></div><div><h4>高鐵</h4><p>搭乘高鐵至「台南站」，轉乘大台南公車 62 路至奇美醫院。</p></div></div>
+        <div class="tline"><div class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14l-1.5-6.5A2 2 0 0015.6 9H8.4a2 2 0 00-1.9 1.5L5 17z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div><div><h4>自行開車</h4><p>永康交流道下往台南市區 → 台1省道 → 中正南路 → 中華路 → 奇美醫院。</p></div></div>
+      </div>
+      <div class="map-box">
+        <iframe loading="lazy" title="奇美醫院地圖" src="https://www.google.com/maps?q=%E5%A5%87%E7%BE%8E%E9%86%AB%E9%99%A2%20%E5%8F%B0%E5%8D%97%E5%B8%82%E6%B0%B8%E5%BA%B7%E5%8D%80%E4%B8%AD%E8%8F%AF%E8%B7%AF901%E8%99%9F&output=embed"></iframe>
+      </div>
+    </div>
+    <div class="trans-note reveal">奇美醫院停車空間有限，敬請預留時間並優先考慮大眾運輸。 ｜ <a href="http://www.chimei.org.tw/newindex/map/cmh_map_1.html" target="_blank" style="color:var(--blue);font-weight:700">查看奇美醫院交通與停車資訊 →</a></div>
+  </div>
+</section>
+
+<!-- CONTACT / ORG -->
+<section id="contact" class="bg-soft">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">ORGANIZER & CONTACT</div>
+      <h2 class="sec-title">主協辦與聯絡資訊<span class="bar"></span></h2>
+    </div>
+    <div class="org-grid reveal">
+      <div class="org"><h4>指導單位</h4><p>國家科學及技術委員會<br>衛生福利部<br>經濟部<br>臺南市政府</p></div>
+      <div class="org"><h4>主辦單位</h4><p>奇美醫療財團法人<br>奇美醫院</p></div>
+      <div class="org"><h4>協辦單位</h4><p>工業技術研究院<br>智慧機器人應用 SIG<br>智慧機器人創新與<br>應用研發中心</p></div>
+    </div>
+    <div class="contact reveal">
+      <h4>聯絡窗口</h4>
+      <p>奇美醫療財團法人奇美醫院<br>深耕計畫辦公室｜聯絡人：吳曉琪小姐(06-2812811# 53710)。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5>大南方智慧醫療機器人前瞻論壇</h5>
+        <p>健康台灣 深耕計畫<br>115年8月17日（週一）13:00–17:15<br>奇美醫院第五醫療大樓5樓 國際會議廳<br>台南市永康區中華路901號</p>
+      </div>
+      <div><h5>快速連結</h5><a href="#about">活動資訊</a><a href="#agenda">活動議程</a><a href="#topics">六大議題</a><a href="#register">立即報名</a><a href="#transport">交通資訊</a></div>
+      <div><h5>主辦單位</h5><p>奇美醫療財團法人奇美醫院</p><a href="海報.pdf" target="_blank">海報下載 ↓</a></div>
+    </div>
+    <div class="foot-bottom">© 2026 奇美醫療財團法人奇美醫院 · 健康台灣 深耕計畫 · All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="modal-ov" id="okModal">
+  <div class="modal">
+    <div class="mok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg></div>
+    <h3>報名已送出！</h3>
+    <p>感謝您報名「大南方智慧醫療機器人前瞻論壇」。主辦單位將進行資格確認，並以 Email 通知報名結果，請留意信件通知。</p>
+    <button class="mbtn" id="okBtn">確認</button>
+  </div>
+</div>
+
+<button id="toTop" aria-label="返回頂端"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+<script>
+/* ===== 報名資料寫入 Google 試算表：見附檔教學，把網址貼進下面 ===== */
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwx_94tmFBH2lWZWBqgZwz34UNpz9E5MPmRVtEo0sO3YsmzRfeJdyGZMV2lGFcTHUc/exec";
+const EVENT_DATE = new Date("2026-08-17T13:00:00+08:00");
+
+const $=s=>document.querySelector(s);
+const nav=$('#nav'),burger=$('#burger'),navlinks=$('#navlinks'),prog=$('#prog'),toTop=$('#toTop');
+burger.onclick=()=>navlinks.classList.toggle('open');
+navlinks.querySelectorAll('a').forEach(a=>{if(a.getAttribute('href')?.startsWith('#'))a.onclick=()=>navlinks.classList.remove('open')});
+function go(id){$(id).scrollIntoView({behavior:'smooth'})}
+
+/* calendar link */
+(function(){
+  const s='20260817T130000',e='20260817T171500';
+  const u='https://calendar.google.com/calendar/render?action=TEMPLATE'
+    +'&text='+encodeURIComponent('大南方智慧醫療機器人前瞻論壇')
+    +'&dates='+s+'/'+e
+    +'&details='+encodeURIComponent('健康台灣 深耕計畫｜探索智慧科技・驅動醫療創新・共創健康未來')
+    +'&location='+encodeURIComponent('奇美醫院 第五醫療大樓5樓 國際會議廳（台南市永康區中華路901號）');
+  $('#calLink').href=u;
+})();
+
+/* scroll */
+const secs=[...document.querySelectorAll('section[id]')];
+const links=[...navlinks.querySelectorAll('a[href^="#"]')];
+function onScroll(){
+  const st=window.scrollY,h=document.documentElement.scrollHeight-innerHeight;
+  prog.style.width=(h>0?st/h*100:0)+'%';
+  nav.classList.toggle('scrolled',st>16);
+  toTop.classList.toggle('show',st>520);
+  let cur=secs[0]?.id;
+  for(const sc of secs){if(st>=sc.offsetTop-120)cur=sc.id}
+  links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+toTop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+/* countdown */
+function tick(){
+  const diff=EVENT_DATE-new Date();
+  if(diff<=0){$('#cd').innerHTML='<div style="width:100%;text-align:center;color:#7fe9df;font-weight:700;padding:10px">論壇進行中／已結束</div>';return}
+  const d=Math.floor(diff/864e5),h=Math.floor(diff%864e5/36e5),m=Math.floor(diff%36e5/6e4),s=Math.floor(diff%6e4/1e3);
+  $('#cd-d').textContent=d;$('#cd-h').textContent=String(h).padStart(2,'0');
+  $('#cd-m').textContent=String(m).padStart(2,'0');$('#cd-s').textContent=String(s).padStart(2,'0');
+}
+tick();setInterval(tick,1000);
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* agenda */
+const AGENDA=[
+  {t:"13:00 – 13:30",badge:"報到",title:"報到與交流",sp:"現場展示區智慧機器人實機微型體驗"},
+  {t:"13:30 – 13:40",title:"致詞",sp:"奇美醫院代表、工研院代表、智慧機器人應用 SIG 代表等"},
+  {t:"13:40 – 14:00",badge:"開場短講",title:"醫療人力與照護模式的雙重挑戰：醫療場域轉型新機遇",sp:"工研院產服中心　陳立偉執行長"},
+  {t:"14:00 – 14:20",badge:"關鍵議題",title:"第一線真正需要怎樣的醫療機器人？",sp:"奇美醫院臨床單位"},
+  {t:"14:20 – 14:40",title:"智慧病房新場景：從物流自動化到護理站自動化",sp:"博鈞科技、臨床人員（AMR 醫療物流廠商）"},
+  {t:"14:40 – 15:00",title:"AI Robots 驅動的下一代智慧醫院數位勞動力",sp:"慧誠智醫、臨床人員（AI 人機協作廠商）"},
+  {t:"14:40 – 15:10",brk:true,title:"茶敘及現場實機媒合交流",sp:"—"},
+  {t:"15:10 – 15:30",title:"安全照護新場景：科技驅動感染防治與環境照護升級",sp:"威剛科技、臨床人員（自主導航消毒廠商）"},
+  {t:"15:30 – 15:50",title:"AI 賦能臨床決策支持：生理量測與病房巡視虛實整合",sp:"西格瑪機器人、臨床人員（巡房機器人廠商）"},
+  {t:"15:50 – 16:15",badge:"前瞻技術",title:"UniCare Medbot 優護醫護助手、Anna 安娜｜安心醫療器械夥伴、照護安全協作機器人",sp:"智慧機器人創新與應用研發中心"},
+  {t:"16:15 – 17:05",badge:"綜合論壇",title:"科技導入到臨床共作：機器人服務隊的想像與挑戰／智慧醫療協作生態系：從場域驗證到規模化推廣",sp:"主持人：工研院南分院 周大鑫執行長｜與談人：奇美醫院代表、各院代表、廠商代表"},
+  {t:"17:05 – 17:15",title:"總結與閉幕",sp:"—"}
+];
+$('#agenda-list').innerHTML=AGENDA.map(a=>`
+  <div class="ag-row${a.brk?' brk':''}">
+    <div class="c1 ag-time">${a.t}</div>
+    <div class="c2">${a.badge?`<span class="ag-badge">${a.badge}</span>`:''}<div class="ag-title">${a.title}</div></div>
+    <div class="c3 ag-sp">${a.sp}</div>
+  </div>`).join('');
+
+/* form */
+const form=$('#regform'),btn=$('#submitBtn');
+const emailRe=/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+function fieldBad(f){
+  if(f.type==='checkbox')return !f.checked;
+  if(f.type==='radio')return !form.querySelector(`[name="${f.name}"]:checked`);
+  if(f.type==='email')return !emailRe.test(f.value.trim());
+  return !f.value.trim();
+}
+function setErr(fld,bad){fld.classList.toggle('invalid',bad)}
+form.querySelectorAll('input,select').forEach(f=>{
+  const fld=f.closest('.fld');if(!fld)return;
+  f.addEventListener('input',()=>{if(fld.classList.contains('invalid'))setErr(fld,fieldBad(f))});
+  if(f.type==='email')f.addEventListener('blur',()=>{if(f.value.trim())setErr(fld,fieldBad(f))});
+});
+form.addEventListener('submit',async e=>{
+  e.preventDefault();let ok=true,first=null;
+  form.querySelectorAll('.fld').forEach(fld=>{
+    const f=fld.querySelector('[required]');if(!f)return;
+    const bad=fieldBad(f);
+    setErr(fld,bad);if(bad){ok=false;first=first||fld}
+  });
+  if(!ok){first?.scrollIntoView({behavior:'smooth',block:'center'});return}
+  btn.disabled=true;btn.textContent='送出中…';
+  const data=Object.fromEntries(new FormData(form).entries());
+  data['報名時間']=new Date().toLocaleString('zh-TW');
+  try{
+    if(APPS_SCRIPT_URL){
+      await fetch(APPS_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)});
+    }else{console.log('（示範模式）報名資料：',data);await new Promise(r=>setTimeout(r,700));}
+    form.reset();form.querySelectorAll('.fld').forEach(f=>f.classList.remove('invalid'));
+    btn.disabled=false;btn.textContent='提交報名';
+    okModal.classList.add('show');
+  }catch(err){alert('送出失敗，請稍後再試或聯絡主辦單位。');btn.disabled=false;btn.textContent='提交報名';}
+});
+const okModal=$('#okModal');
+function closeOk(){okModal.classList.remove('show')}
+$('#okBtn').onclick=closeOk;
+okModal.onclick=e=>{if(e.target===okModal)closeOk()};
+addEventListener('keydown',e=>{if(e.key==='Escape')closeOk()});
+</script>
+</body>
+</html>

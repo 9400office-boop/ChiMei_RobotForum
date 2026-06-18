@@ -133,30 +133,6 @@
   .btn-line{padding:13px 26px;border-radius:30px;font-weight:700;font-size:15px;color:var(--blue);background:#fff;border:1px solid #d2e0d3;display:inline-flex;align-items:center;gap:8px;transition:.25s}
   .btn-line:hover{border-color:var(--blue);background:var(--bg-soft)}
 
-  /* topics — light tech band */
-  #topics{background:radial-gradient(820px 500px at 84% 6%,rgba(122,176,148,.14),transparent 60%),radial-gradient(760px 520px at 6% 96%,rgba(147,168,120,.12),transparent 62%),linear-gradient(170deg,#f3f8f3,#eaf1ea 60%,#f1f6f1);color:var(--ink);position:relative;overflow:hidden}
-  #topics .gridfx{position:absolute;inset:0;background-image:linear-gradient(rgba(122,176,148,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(122,176,148,.13) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(circle at 50% 30%,#000,transparent 82%);-webkit-mask-image:radial-gradient(circle at 50% 30%,#000,transparent 82%)}
-  #topics .wrap{position:relative;z-index:2}
-  .topics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .tcol{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 26px;overflow:hidden;transition:.35s;box-shadow:0 10px 30px rgba(47,58,52,.05)}
-  .tcol::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--cg)}
-  .tcol:hover{transform:translateY(-8px);border-color:#cdddcf;box-shadow:0 24px 54px rgba(47,58,52,.12)}
-  .tghost{position:absolute;top:2px;right:18px;font-size:104px;font-weight:900;font-style:italic;line-height:1;color:rgba(90,122,102,.07);pointer-events:none}
-  .thead{display:flex;align-items:center;gap:14px;position:relative;z-index:2}
-  .ticon{width:58px;height:58px;flex:none;border-radius:16px;display:grid;place-items:center;background:var(--cg);box-shadow:0 8px 20px var(--cglow)}
-  .ticon svg{width:29px;height:29px;color:#fff}
-  .tmeta .tlabel{font-size:11px;letter-spacing:2.5px;font-weight:700;color:var(--cac)}
-  .tmeta .tname{font-size:19.5px;font-weight:800;color:var(--navy);margin-top:3px}
-  .tdiv{height:1px;background:var(--line);margin:20px 0 16px}
-  .tlist{display:flex;flex-direction:column;gap:11px}
-  .titem{display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:13px;background:var(--bg-soft);border:1px solid var(--line);transition:.25s}
-  .titem:hover{background:var(--bg-soft2);transform:translateX(5px)}
-  .titem .no{flex:none;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-weight:900;font-size:14px;color:#fff;background:var(--cg)}
-  .titem .tx{font-size:15px;font-weight:600;color:var(--ink)}
-  .c1{--cg:linear-gradient(135deg,#7ab094,#4a7361);--cac:#3f7a61;--cglow:rgba(122,176,148,.3)}
-  .c2{--cg:linear-gradient(135deg,#93a878,#5d7048);--cac:#5d7048;--cglow:rgba(147,168,120,.3)}
-  .c3{--cg:linear-gradient(135deg,#6f9b89,#3f5f52);--cac:#3f5f52;--cglow:rgba(111,155,137,.3)}
-
   /* agenda */
   .agenda{max-width:920px;margin:0 auto;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 34px rgba(47,58,52,.06)}
   .ag-head{display:grid;grid-template-columns:140px 1fr 220px;background:linear-gradient(100deg,var(--navy),var(--blue));color:#fff;font-weight:700;font-size:14.5px;letter-spacing:2px}
@@ -263,7 +239,7 @@
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-lines .flow{animation:none}}
 
-  @media(max-width:980px){.hero-in,.info-grid,.topics,.reg-grid,.trans-grid,.foot-grid,.form-grid{grid-template-columns:1fr}.hero{padding:120px 0 64px}section{padding:62px 0}}
+  @media(max-width:980px){.hero-in,.info-grid,.reg-grid,.trans-grid,.foot-grid,.form-grid{grid-template-columns:1fr}.hero{padding:120px 0 64px}section{padding:62px 0}}
 </style>
 </head>
 <body>
@@ -277,7 +253,6 @@
       <nav class="nav-links" id="navlinks">
         <a href="#about">活動資訊</a>
         <a href="#agenda">活動議程</a>
-        <a href="#topics">六大議題</a>
         <a href="#register">報名資訊</a>
         <a href="#transport">交通資訊</a>
         <a href="#contact">聯絡資訊</a>
@@ -407,56 +382,6 @@
   </div>
 </section>
 
-<!-- TOPICS -->
-<section id="topics">
-  <div class="gridfx"></div>
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">SIX KEY TOPICS</div>
-      <h2 class="sec-title">論壇主軸 · 六大議題<span class="bar"></span></h2>
-      <p class="sec-desc">三大面向、六大議題，完整貫穿從挑戰、應用到未來的智慧醫療路徑。</p>
-    </div>
-    <div class="topics">
-      <div class="tcol c1 reveal">
-        <div class="tghost">01</div>
-        <div class="thead">
-          <div class="ticon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3.5 19a5.5 5.5 0 0111 0M15 19a5 5 0 015-3"/></svg></div>
-          <div class="tmeta"><div class="tlabel">CHALLENGE</div><div class="tname">醫療現場挑戰</div></div>
-        </div>
-        <div class="tdiv"></div>
-        <div class="tlist">
-          <div class="titem"><span class="no">01</span><span class="tx">醫療人力與照護挑戰</span></div>
-          <div class="titem"><span class="no">02</span><span class="tx">臨床需求直擊</span></div>
-        </div>
-      </div>
-      <div class="tcol c2 reveal">
-        <div class="tghost">02</div>
-        <div class="thead">
-          <div class="ticon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a2 2 0 012-2h10a4 4 0 014 4v4M3 14h18M3 18v2M21 18v2"/><path d="M12 6h3M13.5 4.5v3"/></svg></div>
-          <div class="tmeta"><div class="tlabel">APPLICATION</div><div class="tname">智慧病房應用</div></div>
-        </div>
-        <div class="tdiv"></div>
-        <div class="tlist">
-          <div class="titem"><span class="no">03</span><span class="tx">智慧病房新場景</span></div>
-          <div class="titem"><span class="no">04</span><span class="tx">AI 數位勞動力</span></div>
-        </div>
-      </div>
-      <div class="tcol c3 reveal">
-        <div class="tghost">03</div>
-        <div class="thead">
-          <div class="ticon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l4-4 4 3 3-3 4 4M8 13l3 3 2-2 3 3"/><path d="M3 12v5h18v-5"/></svg></div>
-          <div class="tmeta"><div class="tlabel">BLUEPRINT</div><div class="tname">未來發展藍圖</div></div>
-        </div>
-        <div class="tdiv"></div>
-        <div class="tlist">
-          <div class="titem"><span class="no">05</span><span class="tx">前瞻醫療機器人</span></div>
-          <div class="titem"><span class="no">06</span><span class="tx">智慧醫療生態系</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- REGISTER -->
 <section id="register" class="bg-soft">
   <div class="wrap">
@@ -559,7 +484,7 @@
         <h5>大南方智慧醫療機器人前瞻論壇</h5>
         <p>健康台灣 深耕計畫<br>115年8月17日（週一）13:00–17:30<br>奇美醫院第五醫療大樓5樓 國際會議廳<br>台南市永康區中華路901號</p>
       </div>
-      <div><h5>快速連結</h5><a href="#about">活動資訊</a><a href="#agenda">活動議程</a><a href="#topics">六大議題</a><a href="#register">立即報名</a><a href="#transport">交通資訊</a></div>
+      <div><h5>快速連結</h5><a href="#about">活動資訊</a><a href="#agenda">活動議程</a><a href="#register">立即報名</a><a href="#transport">交通資訊</a></div>
       <div><h5>聯絡窗口</h5><p>深耕計畫辦公室 吳曉琪 小姐<br>06-2812811 # 53710</p><a href="海報.pdf" target="_blank">海報下載 ↓</a></div>
     </div>
     <div class="foot-bottom">© 2026 奇美醫療財團法人奇美醫院 · 健康台灣 深耕計畫 · All rights reserved.</div>
